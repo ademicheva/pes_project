@@ -1,0 +1,409 @@
+.gridland {
+    display: grid;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(11, minmax(auto, auto));
+    margin-top: 0px;
+    margin-bottom: 0p;
+    font-family: 'Cormorant SC', serif;
+    background-color: white;
+    overflow-x: hidden;
+}
+
+header {
+    grid-column: 1 / 2;
+    /* display: flex;*/
+    display: grid;
+    flex-direction: row;
+    background-color: #c0c0c0;
+    grid-template-columns: 50px 1fr;
+    padding-top: 20px;
+}
+
+header h1 {
+    font-family: 'Alex Brush', cursive;
+    font-size: 60px;
+    margin: 0 auto;
+    grid-column: 2/3;
+}
+
+#hamburger-menu {
+    grid-column: 1/2;
+}
+
+#menu__toggle {
+    opacity: 0;
+}
+
+#menu__toggle:checked~.menu__btn>span {
+    transform: rotate(45deg);
+}
+
+#menu__toggle:checked~.menu__btn>span::before {
+    top: 0;
+    transform: rotate(0);
+}
+
+#menu__toggle:checked~.menu__btn>span::after {
+    top: 0;
+    transform: rotate(90deg);
+}
+
+#menu__toggle:checked~.menu__box {
+    visibility: visible;
+    left: 0;
+}
+
+.menu__btn {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 45px;
+    left: 20px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.menu__btn>span,
+.menu__btn>span::before,
+.menu__btn>span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #616161;
+    transition-duration: .25s;
+}
+
+.menu__btn>span::before {
+    content: '';
+    top: -8px;
+}
+
+.menu__btn>span::after {
+    content: '';
+    top: 8px;
+}
+
+.menu__box {
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    left: -100%;
+    width: 300px;
+    height: 100%;
+    margin: 0;
+    padding: 80px 0;
+    list-style: none;
+    background-color: #ECEFF1;
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+    transition-duration: .25s;
+}
+
+.menu__item {
+    display: block;
+    padding: 12px 24px;
+    color: #333;
+    font-family: 'Cormorant SC', serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    transition-duration: .25s;
+}
+
+.menu__item:hover {
+    background-color: #CFD8DC;
+}
+
+.bigphoto {
+    grid-column: 1 / 2;
+    width: 100%;
+}
+
+.bigphoto img {
+    width: 100%;
+}
+
+.slogan {
+    margin-left: 35px;
+    margin-right: 35px;
+    grid-column: 1 / 2;
+    font-size: 50px;
+    text-align: center;
+}
+
+.dws-menu {
+    background-color: #c0c0c0;
+    grid-column: 1 / 2;
+    font-size: 24px;
+    color: black;
+    width: 100%;
+    height: 90px;
+}
+
+ul.dws-ul {
+    display: flex;
+}
+
+li.dws-li {
+    list-style: none;
+    flex-grow: 1;
+}
+
+li.dws-li a {
+    text-decoration: none;
+    font-size: 25px;
+    color: #000;
+    width: 50px;
+    display: inline-block;
+}
+
+.foto {
+    grid-column: 1 / 2;
+    width: 100%;
+}
+
+.foto img {
+    width: 100%;
+}
+
+h2 {
+    grid-column: 1 / 2;
+    text-align: center;
+    font-size: 50px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.featured-menu .featured-ul {
+    grid-column: 1 / 2;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+    color: black;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.featured-menu li {
+    list-style-type: none;
+}
+
+.featured-menu li img {
+    opacity: 0.7;
+}
+
+.featured-menu li a {
+    color: darkgrey;
+    text-decoration: none;
+}
+
+.brands {
+    grid-column: 1 / 2;
+    background-color: black;
+    width: 100%;
+}
+
+ul.brands-ul {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+li.brands-li {
+    list-style: none;
+    flex-grow: 1;
+}
+
+li.brands-li a {
+    color: #000;
+}
+
+li.brands-li img {
+    width: 125px;
+}
+
+li.brands-li:first-child img {
+    width: 200px;
+}
+
+li.brands-li:last-child img {
+    width: 100px;
+    margin-top: 5px;
+}
+
+.container {
+    grid-column: 1 / 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.contacts {
+    grid-column: 1/2;
+    margin-left: 60px;
+    align-items: center;
+}
+
+.contacts p {
+    font-size: 16px;
+}
+
+.column {
+    margin-top: 20px;
+    grid-column: 2/3;
+    margin-left: 80px;
+    line-height: 1.5;
+}
+
+textarea {
+    border-color: #c0c0c0;
+}
+
+#button {
+    font-family: 'Cormorant SC', serif;
+}
+
+footer {
+    grid-column: 1 / 2;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: black;
+}
+
+footer p {
+    grid-column: 1/2;
+    margin-left: 20px;
+}
+
+footer .SMM {
+    grid-column: 2/3;
+}
+
+.SMM {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: border-right;
+    flex-direction: row-reverse;
+    margin-right: 20px;
+}
+
+ul.SMM-ul {
+    display: flex;
+    text-align: border-right;
+    align-items: right;
+    align-content: right;
+    padding-right: 40px;
+}
+
+li.SMM-li {
+    list-style: none;
+    flex-grow: 1;
+    margin-left: 5px;
+    align-items: right;
+    align-content: right;
+}
+
+li.SMM-li a {
+    text-decoration: none;
+    color: #000;
+    text-align: border-right;
+    align-items: right;
+    align-content: right;
+}
+
+@media (min-width: 760px) {
+    li.dws-li a {
+        margin-left: 80px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .featured-menu .featured-ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    li.brands-li img:first-child {
+        width: 80px;
+        margin-right: 50px;
+    }
+    .container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .contacts {
+        grid-column: 1/2;
+    }
+    .column {
+        margin-top: 0px;
+        grid-column: 1/2;
+        margin-bottom: 20px;
+    }
+    #button {
+        margin-left: 0px;
+    }
+}
+
+@media (max-width: 700px) {
+    li.brands-li img:first-child {
+        width: 40px;
+    }
+}
+
+@media (max-width: 900px) {
+    .contacts {
+        grid-column: 1/2;
+    }
+}
+
+@media (max-width: 900px) {
+    .column {
+        margin-top: 0px;
+        grid-column: 1/2;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 900px) {
+    #button {
+        margin-left: 0px;
+    }
+}
+
+#floatingmes,
+#gibsontip,
+#legatotip,
+#remustip,
+#meistertip {
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100px;
+    background: #FFF;
+    opacity: 0.85;
+    border: 1px solid #000;
+}
+
+#fbtip,
+#twtip,
+#youtip,
+#insttip,
+#googletip {
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    left: 0px;
+    width: 100px;
+    color: white;
+    background-color: black;
+    opacity: 0.85;
+}
